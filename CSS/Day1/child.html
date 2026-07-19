@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .newsbox {
+      border: 2px solid red;
+      background-color: yellow;
+      margin-bottom: 10px;
+      padding: 30px;
+      border-radius: 20px;
+      transition: all 0.5s ease;
+      /* Ease is animation timing function, 0.5s is time taken to apply hover effects */
+    }
+
+    .newsbox:hover {
+      background-color: red;
+      border-radius: 50px;
+      color: white
+    }
+
+    .newsbox h3 {
+      text-decoration: underline;
+    }
+
+    .newsbox p {
+      color: white;
+    }
+
+    .newsbox .tags .tag {
+      background-color: green;
+      color: white;
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 40px;
+      text-transform: capitalize;
+      transition: all 0.5s ease;
+    }
+
+    .newsbox:hover .tag {
+      background-color: white;
+      color: red;
+    }
+
+    .newsContainer {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(1, 1fr)
+    }
+
+    @media screen and (max-width: 1440px) {
+      .newsContainer {
+        grid-template-columns: repeat(4, 1fr)
+      }
+
+    }
+
+    @media screen and (max-width: 768px) {
+      .newsContainer {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+    }
+
+    /* We call it as a media query or responsive design */
+
+    @media screen and (max-width: 425px) {
+      .newsContainer {
+        grid-template-columns: repeat(1, 1fr)
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="newsContainer">
+
+
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+      <div class="tags">
+        <div class="tag">politics</div>
+        <div class="tag">kp oli</div>
+      </div>
+    </div>
+
+
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+    </div>
+
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+    </div>
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+    </div>
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+    </div>
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+    </div>
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+    </div>
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+    </div>
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+    </div>
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+    </div>
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+    </div>
+    <div class="newsbox">
+      <h3>News title</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. A quasi nulla in qui dolores saepe, nemo at eveniet
+        officiis inventore ad dolore suscipit numquam nostrum, aliquam error dignissimos eaque ex?
+      </p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

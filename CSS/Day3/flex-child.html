@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 7%;
+      height: 120px;
+      background-color: yellow;
+      align-items: center;
+    }
+
+    header nav {
+      display: flex;
+      gap: 10px;
+    }
+
+    header .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    header .buttons button {
+      padding: 20px 40px;
+      background-color: purple;
+      color: white;
+      border: 0;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    header .buttons button:hover {
+      background-color: palevioletred;
+      cursor: pointer;
+
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      header .buttons {
+        order: 2;
+      }
+
+      header .logo {
+        order: 1;
+      }
+
+      header nav {
+        order: 3;
+      }
+
+    }
+
+    /* 
+    
+    Q1. Understand and Implement all flex properties, flex-grow, flex-shrink, and flex-basis.
+    Q2. Understand and Implement all Grid Properties.
+    Q3. Surprise your instructor.
+    */
+  </style>
+</head>
+
+<body>
+
+  <!-- Inline Elements: span, a, button, img, input -->
+  <!-- Blog Elements: div, all headings (h1-h6), p,    -->
+
+  <header>
+    <div class="logo">Logo</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="buttons">
+      <button>Login</button>
+      <button>Register</button>
+    </div>
+  </header>
+</body>
+
+</html>
