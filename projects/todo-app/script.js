@@ -27,6 +27,16 @@ let list = document.getElementById('todo-container');
 let text = document.getElementById('input-text')
 
 let todos = JSON.parse(localStorage.getItem('todos') || []);
+// let todos =  ["Meet a friend", "Complete a project"];
+
+// todos = [{text: "Go to Market", isCompleted: false},{text: "Go to Market", isCompleted: false}, {text: "Go to Market", isCompleted: false}]
+// todos = [
+//   {text: "Go to Market", isCompleted: false},
+//   {text: "Go to Market", isCompleted: false},
+//   {text: "Go to Market", isCompleted: false}
+// ]
+
+
 let btn = document.getElementById('submit-button');
 function saveTodos(){
   localStorage.setItem('todos', JSON.stringify(todos))
@@ -34,13 +44,19 @@ function saveTodos(){
 
 function renderTodos(){
   list.innerHTML = '';
-  todos.forEach((todo) => {
+  todos.forEach((todo, index) => {
       let createdLi = document.createElement('li');
+
+      if (todo.isCompleted) {
+            createdLi.classList.add("completed");
+        }
+
+
       createdLi.innerHTML = `
-      <span>${todo}</span>
+      <span>${todo.text}</span>
       <div class="actions">
-          <button>✓</button>
-          <button>Delete</button>
+          <button onclick='toggleTodo(${index})'>✓</button>
+          <button onclick="deleteTask(${index})">🗑</button>
         </div>
       `
       list.appendChild(createdLi)
@@ -50,10 +66,25 @@ function renderTodos(){
 function addTodo(){
   let inputText = text.value.trim();
   if(inputText === '') return;
-  todos.push(inputText);
+  todos.push({text:inputText, isCompleted: false});
   saveTodos();
   renderTodos();
   text.value = '';
+}
+
+
+function toggleTodo(i){
+  console.log('I am clickied')
+    todos[i].isCompleted = !todos[i].isCompleted;
+  saveTodos();
+  renderTodos();
+}
+
+
+function deleteTask(index) {
+    todos.splice(index, 1);
+    saveTodos();
+    renderTodos();
 }
 
 btn.addEventListener('click', addTodo)

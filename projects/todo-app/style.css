@@ -41,3 +41,6 @@ body{
   border-top: 1px solid gainsboro;
   padding:10px 0;
 }
+#todo-container li.completed span{
+  text-decoration: line-through;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <input id="k" type="text" placeholder="Press a key">
+
+  <p id="demo"></p>
+
+  <script>
+    const k = document.getElementById("k");
+
+    // Let k listen for keydown
+    k.addEventListener("keydown", function (event) {
+      // Then display the event.key
+      document.getElementById("demo").innerHTML = "You pressed: " + event.key;
+    });
+  </script>
+
+
+  <h1 id="myTitle">Hello Javascript</h1>
+  <script>
+    let heading = document.getElementById('myTitle');
+    // heading.style.backgroundColor = "red"
+    // console.log(heading);
+    // heading.innerText = "Hello Js"
+    // heading.isContentEditable = true;
+    // console.dir(heading)
+
+    heading.onclick = function () {
+      window.alert('I am clicked')
+    }
+  </script>
+</body>
+
+</html>
